@@ -31,10 +31,9 @@ func (p *Provider) Provision(ctx caddy.Context) error {
 
 // UnmarshalCaddyfile sets up the DNS provider from Caddyfile tokens. Syntax:
 //
-// vercel [<api_token>] {
-//     api_token <api_token>
-// }
-//
+//	vercel [<api_token>] {
+//	    api_token <api_token>
+//	}
 func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 	for d.Next() {
 		if d.NextArg() {
